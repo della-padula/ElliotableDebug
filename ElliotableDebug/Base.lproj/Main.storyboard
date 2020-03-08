@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ElliotableDebug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQG-Xr-WYC" customClass="Elliotable" customModule="Elliotable">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0m-ys-KLH">
+                                <rect key="frame" x="20" y="438" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.38336267610000002" green="0.29926826579999999" blue="0.81437059860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DOc-29-TEj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bim-9h-saW"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9p0-pc-ch3">
+                                <rect key="frame" x="182.5" y="482" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onClickSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="vb9-cV-eoZ"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W0m-ys-KLH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="01N-1b-Ver"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W0m-ys-KLH" secondAttribute="trailing" constant="20" id="9o8-Ng-1wb"/>
+                            <constraint firstItem="rQG-Xr-WYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KAX-3Y-EDN"/>
+                            <constraint firstItem="rQG-Xr-WYC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LAf-6V-VJ6"/>
+                            <constraint firstItem="rQG-Xr-WYC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nyu-KO-egI"/>
+                            <constraint firstItem="9p0-pc-ch3" firstAttribute="top" secondItem="W0m-ys-KLH" secondAttribute="bottom" constant="14" id="XdZ-BP-mau"/>
+                            <constraint firstItem="rQG-Xr-WYC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z6i-zJ-ufk"/>
+                            <constraint firstItem="9p0-pc-ch3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cyr-1h-2N0"/>
+                            <constraint firstItem="W0m-ys-KLH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dCI-te-1zv"/>
+                            <constraint firstItem="W0m-ys-KLH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gmb-dN-taB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="elliotable" destination="rQG-Xr-WYC" id="hHR-eC-jfT"/>
+                        <outlet property="fullBorderSwitch" destination="9p0-pc-ch3" id="tRR-Hc-QRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>
