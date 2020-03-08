@@ -26,41 +26,59 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DOc-29-TEj"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="강의 추가하기">
+                                    <color key="titleColor" white="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bim-9h-saW"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9p0-pc-ch3">
-                                <rect key="frame" x="182.5" y="482" width="51" height="31"/>
-                                <connections>
-                                    <action selector="onClickSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="vb9-cV-eoZ"/>
-                                </connections>
-                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="8lU-4Y-FCx">
+                                <rect key="frame" x="146" y="478" width="122.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테두리 켬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv6-Rk-6Kb">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9p0-pc-ch3">
+                                        <rect key="frame" x="73.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onClickSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="vb9-cV-eoZ"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9p0-pc-ch3" firstAttribute="leading" secondItem="iv6-Rk-6Kb" secondAttribute="trailing" constant="10" id="FX9-ky-71o"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="W0m-ys-KLH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="01N-1b-Ver"/>
+                            <constraint firstItem="8lU-4Y-FCx" firstAttribute="top" secondItem="W0m-ys-KLH" secondAttribute="bottom" constant="10" id="4Fq-SK-sig"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W0m-ys-KLH" secondAttribute="trailing" constant="20" id="9o8-Ng-1wb"/>
                             <constraint firstItem="rQG-Xr-WYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KAX-3Y-EDN"/>
                             <constraint firstItem="rQG-Xr-WYC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LAf-6V-VJ6"/>
                             <constraint firstItem="rQG-Xr-WYC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nyu-KO-egI"/>
-                            <constraint firstItem="9p0-pc-ch3" firstAttribute="top" secondItem="W0m-ys-KLH" secondAttribute="bottom" constant="14" id="XdZ-BP-mau"/>
                             <constraint firstItem="rQG-Xr-WYC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z6i-zJ-ufk"/>
-                            <constraint firstItem="9p0-pc-ch3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cyr-1h-2N0"/>
                             <constraint firstItem="W0m-ys-KLH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dCI-te-1zv"/>
                             <constraint firstItem="W0m-ys-KLH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gmb-dN-taB"/>
+                            <constraint firstItem="8lU-4Y-FCx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wRJ-YN-lpd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="elliotable" destination="rQG-Xr-WYC" id="hHR-eC-jfT"/>
                         <outlet property="fullBorderSwitch" destination="9p0-pc-ch3" id="tRR-Hc-QRj"/>
+                        <outlet property="lblSwitch" destination="iv6-Rk-6Kb" id="wza-Uf-k2a"/>
+                        <outlet property="toggleBtn" destination="W0m-ys-KLH" id="3AU-sV-9uy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
